@@ -3,6 +3,10 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <app-message></app-message>
+      <input type="text" [(ngModel)]="pessoa3.personId">
+      <input type="text" [(ngModel)]="pessoa3.name" >
+      <input type="text" [(ngModel)]="pessoa3.age" >
+      <font color="red">{{ pessoa3.personId }} - {{ pessoa3.name }} - {{ pessoa3.age }}</font>
     </div>
   </div>
 </div>
