@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, Input} from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { Message } from "./message.model";
 
 @Component({
     selector: 'app-message',
@@ -10,9 +11,5 @@ import { FormsModule } from "@angular/forms";
 })
 
 export class MessageComponent {
-    title = 'menssagem';
-    message = {
-        content: 'to ficano fera no assunto',
-        author: 'Caio Nathan'
-    };
+    @Input() messageVarClasse : Message = new Message
 }
