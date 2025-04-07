@@ -12,4 +12,7 @@ import { Message } from "./message.model";
 
 export class MessageComponent {
     @Input() messageVarClasse : Message = new Message
+    onEdit(){
+        alert('ta funcionando...')
+    }
 }
