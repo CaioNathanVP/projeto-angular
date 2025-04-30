@@ -2,9 +2,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <app-message [messageVarClasse]="messageBinding"></app-message>
-      <br>
-      <app-message-signal [messageVarClasse]="messageBinding"></app-message-signal>
+      <!-- @Input() -->
+      <!-- <app-message
+        [messageVarClasse]="messageBinding"
+        (outputMessage)="messageBinding.content = $event"
+      >
+      </app-message> -->
+      <br />
+      <!-- Signal input -->
+      <app-message-signal
+        [messageVarClasse]="msg"
+        (outputMessage)='msg.content = $event'
+        *ngFor="let msg of messageS"
+      >
+      </app-message-signal>
     </div>
   </div>
 </div>
