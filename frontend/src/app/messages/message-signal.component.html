@@ -1,22 +1,15 @@
-<input type="text" [(ngModel)]="messageVarClasse.content" />
-<input type="text" [(ngModel)]="messageVarClasse.username" />
-
-<article
-  class="panel panel-default"
-  [ngStyle]="{ backgroundColor: color }"
-  (mouseenter)="color = 'green'"
-  (mouseleave)="color = 'blue'"
->
-  <div class="panel-body">
+<br>
+<article class="panel panel-default">
+  <div class="panelbody">
     {{ messageVarClasse.content }}
   </div>
   <footer class="panel-footer">
     <div class="author">
-      {{ messageVarClasse.username }}
+      {{messageVarClasse.username}}
     </div>
     <div class="config">
-      <a href="#">Edit</a>
-      <a href="#">Delete</a>
+      <a href="#" (click)="onEdit()">Edit</a>
+      <a href="#">delet</a>
     </div>
   </footer>
 </article>
