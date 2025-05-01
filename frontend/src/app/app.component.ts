@@ -1,8 +1,5 @@
 import { Component } from "@angular/core";
-import { MessageComponent } from "./messages/message.component"
 import { Message } from "./messages/message.model";
-import { MessageComponentSignal } from "./messages/message-signal.component";
-import { RouterOutlet } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { MessageInputComponent } from "./messages/message-input.component";
 import { MessageListComponent } from "./messages/message-list.component";
@@ -12,9 +9,6 @@ import { MessageListComponent } from "./messages/message-list.component";
     standalone: true,
     imports: [
     CommonModule,
-    RouterOutlet,
-    MessageComponent,
-    MessageComponentSignal,
     MessageInputComponent,
     MessageListComponent
 ],
