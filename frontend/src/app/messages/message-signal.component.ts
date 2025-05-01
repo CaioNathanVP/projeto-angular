@@ -1,4 +1,4 @@
-import { Component, Input, input } from "@angular/core";
+import { Component, EventEmitter, Input, Output, input } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Message } from "./message.model";
 import { CommonModule } from "@angular/common";
@@ -11,8 +11,13 @@ import { CommonModule } from "@angular/common";
     styleUrl: './message.component.css'
 })
 
+// export class MessageComponentSignal {
+//     color = 'yellow';
+//     messageVarClasse = input<Message>(new Message("", ""));
+//     //@Input() messageVarClasse : Message = new Message
+// }
+
 export class MessageComponentSignal {
     color = 'yellow';
-    messageVarClasse = input<Message>(new Message("", ""));
-    //@Input() messageVarClasse : Message = new Message
-}
+    @Input() messageVarClasse: Message = new Message();
+  }

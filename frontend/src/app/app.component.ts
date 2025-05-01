@@ -20,12 +20,17 @@ import { CommonModule } from "@angular/common";
 
 })
 
+// export class AppComponent {
+//     messageS: Message[] = [new Message("Texto 01 da Mensagem", "ViniciusRosalen"),
+//     new Message("Texto 02 da Mensagem", "RosalenSilva"),
+//     new Message("Texto 03 da Mensagem", "SilvaVinicius")
+//     ];
 export class AppComponent {
-    messageS: Message[] = [new Message("Texto 01 da Mensagem", "ViniciusRosalen"),
-    new Message("Texto 02 da Mensagem", "RosalenSilva"),
-    new Message("Texto 03 da Mensagem", "SilvaVinicius")
+    messageS: Message[] = [
+        new Message("Texto 01 da Mensagem", "ViniciusRosalen"),
+        new Message("Texto 02 da Mensagem", "RosalenSilva"),
+        new Message("Texto 03 da Mensagem", "SilvaVinicius")
     ];
-
     messageBinding: Message = new Message("mensagem via input", "Caio Nathan");
     title = 'frontend';
 }

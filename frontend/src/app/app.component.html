@@ -11,11 +11,10 @@
       <br />
       <!-- Signal input -->
       <app-message-signal
-        [messageVarClasse]="msg"
-        (outputMessage)='msg.content = $event'
-        *ngFor="let msg of messageS"
-      >
-      </app-message-signal>
+  [messageVarClasse]="msg"
+  *ngFor="let msg of messageS"
+>
+</app-message-signal>
     </div>
   </div>
 </div>
