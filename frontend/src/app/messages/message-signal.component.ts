@@ -18,6 +18,9 @@ import { CommonModule } from "@angular/common";
 // }
 
 export class MessageComponentSignal {
-    color = 'yellow';
-    @Input() messageVarClasse: Message = new Message();
-  }
+    @Input() messageVarClasse : Message = new Message
+    @Output() outputMessage = new EventEmitter<string>();
+    onEdit(){
+        this.outputMessage.emit("texto retornado: venho de message")
+    }
+    }

@@ -4,7 +4,6 @@ import { Message } from "./messages/message.model";
 import { MessageComponentSignal } from "./messages/message-signal.component";
 import { RouterOutlet } from "@angular/router";
 import { CommonModule } from "@angular/common";
-import {  } from "./messages/message-list.component";
 import { MessageInputComponent } from "./messages/message-input.component";
 import { MessageListComponent } from "./messages/message-list.component";
 
@@ -25,8 +24,6 @@ import { MessageListComponent } from "./messages/message-list.component";
 })
 
 export class AppComponent {
-
-    
 
     valorNgSwitch: number = 0;
 

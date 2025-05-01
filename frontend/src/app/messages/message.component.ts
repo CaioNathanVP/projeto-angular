@@ -13,7 +13,8 @@ import { CommonModule } from "@angular/common";
 
 export class MessageComponent {
     @Input() messageVarClasse : Message = new Message
+    @Output() outputMessage = new EventEmitter<string>();
     onEdit(){
-        alert('ta funcionando...')
+        this.outputMessage.emit("texto retornado: venho de message")
     }
     }
