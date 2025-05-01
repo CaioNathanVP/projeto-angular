@@ -2,19 +2,36 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <!-- @Input() -->
-      <!-- <app-message
-        [messageVarClasse]="messageBinding"
-        (outputMessage)="messageBinding.content = $event"
+      <!-- <br />
+      <app-message-signal [messageVarClasse]="msg" *ngFor="let msg of messageS">
+      </app-message-signal>
+      <br /><br />  -->
+
+      @for (msg of messageS; track $index) {
+        <app-message-signal [messageVarClasse]="msg"></app-message-signal>
+      }@empty {messageS é uma lista vazia}
+
+      <button (click)="valorNgSwitch=1">selecione - 1</button>
+      <button (click)="valorNgSwitch=2">selecione - 2</button>
+      <button (click)="valorNgSwitch=3">selecione - 3</button>
+      <h5>Voce selecionou : {{valorNgSwitch}}</h5>
+
+      <div [ngSwitch]="valorNgSwitch">
+        <div *ngSwitchCase="1">1. template - <b>{{valorNgSwitch}}</b></div>
+        <div *ngSwitchCase="2">2. template - <b>{{valorNgSwitch}}</b></div>
+        <div *ngSwitchCase="3">3. template - <b>{{valorNgSwitch}}</b></div>
+        <div *ngSwitchDefault>Default Template</div>
+      </div>
+      <button (click)="onMudaMostrarElemento()">
+        Click aqui 'com then e else'
+      </button>
+      <p *ngIf="mostrarElemento; then thenBlockMy; else elseBlockMy"></p>
+      <ng-template #thenBlockMy
+        ><p>{{ mostrarElemento }} - Mostrando do Then ...</p></ng-template
       >
-      </app-message> -->
-      <br />
-      <!-- Signal input -->
-      <app-message-signal
-  [messageVarClasse]="msg"
-  *ngFor="let msg of messageS"
->
-</app-message-signal>
+      <ng-template #elseBlockMy
+        ><p>{{ mostrarElemento }} - Escondido do Else ...</p></ng-template
+      >
     </div>
   </div>
 </div>

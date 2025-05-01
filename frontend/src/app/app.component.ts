@@ -26,6 +26,13 @@ import { CommonModule } from "@angular/common";
 //     new Message("Texto 03 da Mensagem", "SilvaVinicius")
 //     ];
 export class AppComponent {
+
+    valorNgSwitch: number = 0;
+
+    mostrarElemento: boolean = true;
+    onMudaMostrarElemento() {
+        this.mostrarElemento = !this.mostrarElemento;
+    }
     messageS: Message[] = [
         new Message("Texto 01 da Mensagem", "ViniciusRosalen"),
         new Message("Texto 02 da Mensagem", "RosalenSilva"),
